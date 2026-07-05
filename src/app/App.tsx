@@ -147,7 +147,7 @@ export default function App() {
       </nav>
 
       {/* ── HERO ── */}
-      <section className="relative pt-36 pb-32 px-6 overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center pt-16 px-6 overflow-hidden">
 
         <motion.div
           className="absolute inset-0 pointer-events-none"
