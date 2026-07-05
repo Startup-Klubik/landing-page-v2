@@ -455,15 +455,19 @@ export default function App() {
       </section>
 
       {/* ── CONTACT ── */}
-      <section id="contact" className="py-24 px-6 bg-[#1a1523]">
+      <section id="contact" className="relative py-24 px-6 bg-[#1a1523] overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute -top-20 -left-24 h-72 w-72 rounded-full bg-[radial-gradient(circle,_rgba(155,47,212,0.24),_transparent_60%)] blur-3xl opacity-90" />
+          <div className="absolute -bottom-28 -right-28 h-96 w-96 rounded-full bg-[radial-gradient(circle,_rgba(212,37,106,0.18),_transparent_60%)] blur-3xl opacity-85" />
+        </div>
         <FadeUp>
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-start">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-widest text-[#555] mb-4">Contact Us</p>
+            <p className="text-xs font-semibold uppercase tracking-widest text-white mb-4">Contact Us</p>
             <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-tight mb-6">
               Tell us what you are trying to solve.
             </h2>
-            <p className="text-[#717171] leading-relaxed mb-10 text-[15px]">
+            <p className="text-white/80 leading-relaxed mb-10 text-[15px]">
               Share where things are breaking down in your organisation. We will figure out the right technical approach together.
             </p>
             <div className="space-y-4">
@@ -472,7 +476,7 @@ export default function App() {
                   <Mail size={16} />
                 </div>
                 <div>
-                  <div className="text-[11px] text-[#555]">Email</div>
+                  <div className="text-[11px] text-white/80">Email</div>
                   <div className="text-sm font-medium">hello@dokero.com</div>
                 </div>
               </a>
@@ -481,7 +485,7 @@ export default function App() {
                   <Phone size={16} />
                 </div>
                 <div>
-                  <div className="text-[11px] text-[#555]">Phone</div>
+                  <div className="text-[11px] text-white/80">Phone</div>
                   <div className="text-sm font-medium">+45 00 00 00 00</div>
                 </div>
               </a>
@@ -493,41 +497,41 @@ export default function App() {
               <div className="bg-white/5 border border-white/10 rounded-3xl p-12 text-center">
                 <div className="w-10 h-10 rounded-full mx-auto mb-4 flex items-center justify-center text-white text-lg font-bold" style={{ background: "linear-gradient(135deg, #9B2FD4, #E06020)" }}>✓</div>
                 <h3 className="text-white font-bold text-xl mb-2">Message sent!</h3>
-                <p className="text-[#717171] text-sm">We will get back to you within 24 hours.</p>
+                <p className="text-white/80 text-sm">We will get back to you within 24 hours.</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
-                  <label className="block text-[11px] font-medium text-[#555] mb-1.5">Name</label>
+                  <label className="block text-[11px] font-medium text-white/80 mb-1.5">Name</label>
                   <input
                     type="text"
                     required
                     placeholder="Jane Smith"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white text-sm placeholder:text-[#3a3a3a] focus:outline-none focus:border-[#9B2FD4] transition-colors"
+                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white text-sm placeholder:text-white/60 focus:outline-none focus:border-[#9B2FD4] transition-colors"
                   />
                 </div>
                 <div>
-                  <label className="block text-[11px] font-medium text-[#555] mb-1.5">Work Email</label>
+                  <label className="block text-[11px] font-medium text-white/80 mb-1.5">Work Email</label>
                   <input
                     type="email"
                     required
                     placeholder="jane@company.com"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white text-sm placeholder:text-[#3a3a3a] focus:outline-none focus:border-[#9B2FD4] transition-colors"
+                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white text-sm placeholder:text-white/60 focus:outline-none focus:border-[#9B2FD4] transition-colors"
                   />
                 </div>
                 <div>
-                  <label className="block text-[11px] font-medium text-[#555] mb-1.5">How can we help?</label>
+                  <label className="block text-[11px] font-medium text-white/80 mb-1.5">How can we help?</label>
                   <textarea
                     required
                     rows={4}
                     placeholder="Tell us about your project..."
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white text-sm placeholder:text-[#3a3a3a] focus:outline-none focus:border-[#9B2FD4] transition-colors resize-none"
+                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white text-sm placeholder:text-white/60 focus:outline-none focus:border-[#9B2FD4] transition-colors resize-none"
                   />
                 </div>
                 <button
