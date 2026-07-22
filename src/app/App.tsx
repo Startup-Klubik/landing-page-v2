@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { motion, useInView } from "motion/react";
-import { ArrowRight, Menu, X, Mail, Phone, Search, PenTool, Code2, Activity, ShieldCheck, Layers, Cpu, ChevronDown } from "lucide-react";
+import { ArrowRight, Menu, X, Mail, Phone, Search, PenTool, Code2, Activity, ChevronDown } from "lucide-react";
 import dokeroLogo from "../imports/Icon-500-500-color__1_.png";
 
 const defaultMotion = { duration: 0.25, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] };
@@ -18,6 +18,131 @@ function FadeUp({ children, delay = 0, className = "" }: { children: React.React
     >
       {children}
     </motion.div>
+  );
+}
+
+function ProductSpotlight() {
+  const productPillars = [
+    {
+      title: "Stop architecture drift early",
+      detail: "Flag generated code that breaks architectural boundaries.",
+    },
+    {
+      title: "Enforce team standards automatically",
+      detail: "Apply guardrails so AI output follows agreed patterns.",
+    },
+    {
+      title: "Scale reviews without losing context",
+      detail: "Attach specs and diagrams so reviews stay fast and consistent.",
+    },
+  ];
+
+  const outcomes = [
+    {
+      label: "Architecture score",
+      value: "92",
+      context: "Composite compliance score across recent AI-generated changes.",
+    },
+    {
+      label: "Spec coverage",
+      value: "67%",
+      context: "Share of active modules currently linked to an approved spec.",
+    },
+    {
+      label: "Pending reviews",
+      value: "3",
+      context: "Changes currently awaiting architecture-owner sign-off.",
+    },
+  ];
+
+  return (
+    <section id="products" className="relative overflow-hidden px-6 py-24">
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute -left-20 top-10 h-56 w-56 rounded-full bg-[radial-gradient(circle,_rgba(155,47,212,0.14),_transparent_62%)] blur-3xl" />
+        <div className="absolute right-[-4rem] top-20 h-72 w-72 rounded-full bg-[radial-gradient(circle,_rgba(224,96,32,0.11),_transparent_62%)] blur-3xl" />
+        <div className="absolute left-[38%] -bottom-16 h-64 w-64 rounded-full bg-[radial-gradient(circle,_rgba(212,37,106,0.10),_transparent_62%)] blur-3xl" />
+      </div>
+
+      <div className="relative z-10 max-w-6xl mx-auto">
+        <FadeUp className="mb-14 max-w-3xl">
+          <p className="text-xs font-semibold uppercase tracking-widest text-[#717171] mb-3">Our products</p>
+          <div className="mb-4 h-1.5 w-28 rounded-full bg-gradient-to-r from-[#9B2FD4] via-[#D4256A] to-[#E06020]" />
+          <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-[#1a1523] leading-tight">
+            Architecture governance for humans and AI agents.
+          </h2>
+          <p className="mt-4 text-[#717171] text-[14px] md:text-[15px] leading-relaxed max-w-2xl">
+            AI coding agents can move fast, but teams still struggle with architecture drift, broken standards, and review bottlenecks. Specy gives you a lightweight governance layer in VS Code so delivery stays aligned.
+          </p>
+        </FadeUp>
+
+        <div className="grid gap-5 lg:grid-cols-12 items-stretch">
+          <FadeUp delay={0.1} className="lg:col-span-8 h-full">
+            <div className="relative h-full overflow-hidden rounded-3xl border border-black/[0.07] bg-white/72 backdrop-blur-sm p-8 md:p-9 shadow-[0_20px_48px_rgba(26,21,35,0.07)]">
+              <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[#9B2FD4] via-[#D4256A] to-[#E06020]" />
+
+              <h3 className="text-2xl md:text-[2rem] font-extrabold tracking-tight text-[#1a1523]">Specy</h3>
+              <div className="mt-3">
+                <p className="text-[15px] leading-relaxed text-[#5f5f76] max-w-2xl">
+                  Specy turns raw code into editable specs and diagrams, then uses those specs as guardrails so AI implementation stays aligned with your architecture standards.
+                </p>
+              </div>
+
+              <div className="mt-6 space-y-4">
+                {productPillars.map((pillar) => (
+                  <div key={pillar.title} className="pl-4 border-l-2 border-[#9B2FD4]/30">
+                      <p className="text-[13px] font-semibold text-[#252538]">{pillar.title}</p>
+                      <p className="mt-1 text-[13px] leading-relaxed text-[#686880]">{pillar.detail}</p>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                <p className="text-[13px] text-[#66667c]">
+                  Built for developers, architecture leads, and teams shipping with AI assistance.
+                </p>
+                <a
+                  href="/speccy.html"
+                  className="inline-flex items-center justify-center gap-2.5 rounded-full border border-black/[0.15] bg-white px-5 py-2.5 text-sm font-semibold text-[#1a1523] transition-transform hover:-translate-y-0.5 hover:bg-white/70 self-start sm:self-auto"
+                >
+                  Explore Specy
+                  <ArrowRight size={16} />
+                </a>
+              </div>
+            </div>
+          </FadeUp>
+
+          <FadeUp delay={0.2} className="lg:col-span-4 h-full">
+            <div className="h-full rounded-3xl border border-black/[0.07] bg-white/72 backdrop-blur-sm p-6 shadow-[0_16px_40px_rgba(26,21,35,0.06)]">
+              <h3 className="text-lg font-bold text-[#1a1523]">Outcome signals</h3>
+              <p className="mt-2 text-[13px] leading-relaxed text-[#66667d]">
+                Example snapshot from a governed engineering workflow.
+              </p>
+
+              <div className="mt-4 space-y-3">
+                {outcomes.map((item) => (
+                  <div key={item.label} className="rounded-2xl border border-black/[0.06] bg-white/90 px-3.5 py-3">
+                    <div className="flex items-center justify-between gap-3">
+                      <span className="text-[13px] text-[#65657a]">{item.label}</span>
+                      <span className="text-[13px] font-bold text-[#1f1f2f]">{item.value}</span>
+                    </div>
+                    <p className="mt-1.5 text-[12px] leading-relaxed text-[#76768d]">{item.context}</p>
+                  </div>
+                ))}
+              </div>
+
+              <a
+                href="/speccy.html"
+                className="mt-5 inline-flex items-center gap-2 text-[13px] font-semibold text-[#7a3ca8] hover:text-[#632e89]"
+              >
+                See full Specy details
+                <ArrowRight size={14} />
+              </a>
+
+            </div>
+          </FadeUp>
+        </div>
+      </div>
+    </section>
   );
 }
 
@@ -85,25 +210,9 @@ export default function App() {
             {productsOpen && (
               <div className="absolute top-full left-0 mt-3 w-[220px] rounded-[1.75rem] border border-black/[0.08] bg-white/95 backdrop-blur-xl shadow-2xl p-3">
                 <a
-                  href="#architect"
+                  href="/speccy.html"
                   onClick={() => setProductsOpen(false)}
                   className="block rounded-2xl px-4 py-3 text-sm text-[#1a1523] hover:bg-[#f6f4ff]"
-                >
-                  Dokero Architect
-                </a>
-                <a
-                  href="#engine"
-                  onClick={() => setProductsOpen(false)}
-                  className="mt-1 block rounded-2xl px-4 py-3 text-sm text-[#1a1523] hover:bg-[#f6f4ff]"
-                >
-                  Dokero Engine
-                </a>
-                <a
-                  href="/speccy.html"
-                  target="_blank"
-                  rel="noreferrer"
-                  onClick={() => setProductsOpen(false)}
-                  className="mt-1 block rounded-2xl px-4 py-3 text-sm text-[#1a1523] hover:bg-[#f6f4ff]"
                 >
                   Specy
                 </a>
@@ -136,9 +245,7 @@ export default function App() {
             </button>
             {productsOpen && (
               <div className="ml-4 flex flex-col gap-2">
-                <a href="#architect" onClick={() => { setMenuOpen(false); setProductsOpen(false); }} className="text-[#717171] hover:text-[#1a1523]">Dokero Architect</a>
-                <a href="#engine" onClick={() => { setMenuOpen(false); setProductsOpen(false); }} className="text-[#717171] hover:text-[#1a1523]">Dokero Engine</a>
-                <a href="/speccy.html" target="_blank" rel="noreferrer" onClick={() => { setMenuOpen(false); setProductsOpen(false); }} className="text-[#717171] hover:text-[#1a1523]">Specy</a>
+                <a href="/speccy.html" onClick={() => { setMenuOpen(false); setProductsOpen(false); }} className="text-[#717171] hover:text-[#1a1523]">Specy</a>
               </div>
             )}
             <a href="#contact" onClick={() => setMenuOpen(false)} className="text-[#717171] hover:text-[#1a1523]">Get in touch</a>
@@ -210,6 +317,7 @@ export default function App() {
         <div className="max-w-6xl mx-auto">
           <FadeUp className="mb-16">
             <p className="text-xs font-semibold uppercase tracking-widest text-[#717171] mb-3">What We Do</p>
+            <div className="mb-4 h-1.5 w-28 rounded-full bg-gradient-to-r from-[#9B2FD4] via-[#D4256A] to-[#E06020]" />
             <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-[#1a1523] max-w-2xl leading-tight">
               Technical consulting built around your actual problems
             </h2>
@@ -276,6 +384,7 @@ export default function App() {
         <div className="max-w-6xl mx-auto">
           <FadeUp className="mb-16 max-w-2xl">
             <p className="text-xs font-semibold uppercase tracking-widest text-[#717171] mb-3">How We Work</p>
+            <div className="mb-4 h-1.5 w-28 rounded-full bg-gradient-to-r from-[#9B2FD4] via-[#D4256A] to-[#E06020]" />
             <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-[#1a1523] leading-tight mb-4">
               From problem to working solution
             </h2>
@@ -396,52 +505,9 @@ export default function App() {
         </div>
       </section>
       {/* ── PRODUCTS ── */}
-      <section id="products" className="py-20 px-6">
-        <FadeUp>
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <p className="text-xs font-semibold uppercase tracking-widest text-[#717171] mb-3">Our products</p>
-            <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-[#1a1523] max-w-3xl mx-auto">
-              Built to help teams manage architecture, execution and AI governance.
-            </h2>
-          </div>
-
-          <div className="grid gap-6 md:grid-cols-3">
-            <div className="group rounded-[2rem] border border-black/[0.08] bg-white/80 p-7 shadow-sm hover:shadow-lg transition-shadow duration-300">
-              <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-3xl bg-[#efe5ff] text-[#7c3cff]">
-                <Layers size={24} />
-              </div>
-              <h3 className="text-xl font-semibold text-[#1a1523] mb-3">Dokero Architect</h3>
-              <p className="text-sm text-[#717171] leading-relaxed">
-                Define architecture rules, approval flows and policy guardrails for teams that need clear structure without slowing down delivery.
-              </p>
-            </div>
-
-            <div className="group rounded-[2rem] border border-black/[0.08] bg-white/80 p-7 shadow-sm hover:shadow-lg transition-shadow duration-300">
-              <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-3xl bg-[#ffe8e3] text-[#d4256a]">
-                <Cpu size={24} />
-              </div>
-              <h3 className="text-xl font-semibold text-[#1a1523] mb-3">Dokero Engine</h3>
-              <p className="text-sm text-[#717171] leading-relaxed">
-                Execute workflows with confidence, monitor runtime behavior, and keep automation aligned to the policies your team has agreed on.
-              </p>
-            </div>
-
-            <div className="group rounded-[2rem] border border-black/[0.08] bg-white/80 p-7 shadow-sm hover:shadow-lg transition-shadow duration-300">
-              <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-3xl bg-[#e9f3ff] text-[#1d6fff]">
-                <ShieldCheck size={24} />
-              </div>
-              <h3 className="text-xl font-semibold text-[#1a1523] mb-3">Specy</h3>
-              <p className="text-sm text-[#717171] leading-relaxed">
-                Capture your codebase intent and turn it into a governance-ready architecture model that AI agents can safely build against.
-              </p>
-            </div>
-          </div>
-        </div>
-        </FadeUp>
-      </section>
+      <ProductSpotlight />
       {/* ── BACKED BY ── */}
-      <section className="py-14 px-6 border-t border-b border-black/[0.06]">
+      <section className="py-14 px-6">
         <FadeUp>
         <div className="max-w-6xl mx-auto text-center">
           <p className="text-xs font-semibold uppercase tracking-widest text-[#aaa] mb-8">Backed by</p>
