@@ -8,7 +8,7 @@ export default function Footer() {
           <div className="flex flex-col gap-2">
             <a href="#" className="flex items-center select-none group" aria-label="Cora Technologies">
               <img
-                src="/logos/Logo-light.svg"
+                src="./logos/Logo-light.svg"
                 alt="Cora Technologies"
                 className="h-8 md:h-9 w-auto object-contain transition-transform group-hover:scale-[1.02]"
               />

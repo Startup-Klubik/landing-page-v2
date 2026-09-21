@@ -21,7 +21,7 @@ export default function Affiliation() {
             <div className="flex items-center shrink-0">
               <div className="border-trace-card flex items-center gap-4 rounded-2xl border border-slate-200 bg-slate-50/70 px-6 py-4 shadow-2xs hover:border-slate-300 transition-colors">
                 <img
-                  src="/logos/skylab.png"
+                  src="./logos/skylab.png"
                   alt="DTU Skylab"
                   className="h-8 w-auto object-contain"
                 />

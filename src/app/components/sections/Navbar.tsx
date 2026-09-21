@@ -9,7 +9,7 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
         <a href="#" className="flex items-center select-none group" aria-label="Cora Technologies Home">
           <img
-            src="/logos/Logo.svg"
+            src="./logos/Logo.svg"
             alt="Cora Technologies"
             className="h-10 md:h-11 w-auto object-contain transition-transform group-hover:scale-[1.02]"
           />
