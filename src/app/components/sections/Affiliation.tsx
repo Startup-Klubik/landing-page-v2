@@ -7,14 +7,11 @@ export default function Affiliation() {
         <FadeUp>
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-10">
             <div className="max-w-xl">
-              <p className="text-[11px] font-bold uppercase tracking-widest text-[#047857] mb-3">
-                Institutional Heritage
-              </p>
               <h2 className="text-xl md:text-2xl font-bold text-[#0f172a] tracking-tight mb-3">
-                Incubated at DTU SkyLab — Denmark&apos;s deep-tech innovation hub
+                Incubated at DTU SkyLab — Denmark&apos;s innovation hub
               </h2>
               <p className="text-sm md:text-[15px] text-slate-600 leading-relaxed font-normal">
-                Founded by computer science engineers at the Technical University of Denmark (DTU). We translate rigorous systems engineering and academic depth into high-impact commercial software.
+                Founded by computer science engineers at the Technical University of Denmark (DTU). We combine systems engineering and academic knowledge into high-impact commercial software.
               </p>
             </div>
 

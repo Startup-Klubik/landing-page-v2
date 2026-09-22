@@ -17,15 +17,15 @@ export default function DueDiligence() {
   ];
 
   return (
-    <section id="due-diligence" className="py-20 md:py-28 px-6 bg-white border-b border-slate-200/80">
+    <section id="explore-with-us" className="py-20 md:py-28 px-6 bg-white border-b border-slate-200/80">
       <div className="max-w-6xl mx-auto">
         <FadeUp className="mb-10 md:mb-14 max-w-3xl">
-          <SectionLabel>Advisory Practice</SectionLabel>
+          <SectionLabel>Explore with us</SectionLabel>
           <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-[#0f172a] leading-tight">
-            Automated Technical DD
+            Automated Tech Due-Diligence
           </h2>
           <p className="mt-4 text-slate-600 text-base md:text-lg leading-relaxed max-w-2xl">
-            We are pioneering automated codebase and architectural audits designed for venture capital investors, acquirers, and founding teams. Receive a structured, evidence-backed evaluation of a software asset without month-long advisory lags.
+            We are exploring option of automated codebase and architectural audits designed for venture capital investors, acquirers, and founding teams. Receive a structured, evidence-backed evaluation of a software asset without month-long advisory delays.
           </p>
         </FadeUp>
 
@@ -113,7 +113,7 @@ export default function DueDiligence() {
                   Built for Investors & Acquirers
                 </h3>
                 <p className="text-sm text-slate-600 leading-relaxed mb-6">
-                  Traditional technical due diligence relies on inconsistent interviews. Our framework combines automated static code analysis with senior architectural review for repeatable clarity.
+                  While traditional technical due diligence relies heavily on manual interviews and manual code analysis. Our expertise in AI, automation, and software engineering allows us to automate the heavy lifting. We enable faster, deeper, and cheaper technical evaluations for high-stakes dealmaking.
                 </p>
 
                 <div className="space-y-4">

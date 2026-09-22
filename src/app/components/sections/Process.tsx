@@ -1,4 +1,4 @@
-import { ArrowRight, Search, FileCode, CheckCircle2, Headphones } from "lucide-react";
+import { Search, FileCode, Layers, Headphones } from "lucide-react";
 import SectionLabel from "../shared/SectionLabel";
 import FadeUp from "../shared/FadeUp";
 
@@ -7,25 +7,25 @@ const phases = [
     step: "01",
     name: "Discovery & Alignment",
     Icon: Search,
-    description: "We evaluate business objectives, existing system constraints, and repository architecture to pinpoint root technical bottlenecks.",
+    description: "We sit down and figure out where we can make a real difference. No templates, no assumptions — just a direct conversation about your business, your systems, and what's actually getting in the way.",
   },
   {
     step: "02",
-    name: "Architectural Specification",
-    Icon: FileCode,
-    description: "We define pragmatic system blueprints and data models — choosing simple, proven technologies over unnecessary complexity.",
+    name: "Proposal, PoC & Blueprint",
+    Icon: Layers,
+    description: "We come back with a concrete proposal: a working proof of concept that demonstrates the solution, a business case for the value it unlocks, and a clear delivery blueprint so you know exactly what you're approving.",
   },
   {
     step: "03",
-    name: "Hardened Implementation",
-    Icon: CheckCircle2,
-    description: "We deliver working, production-ready software — clean, maintainable, rigorously tested, and built for team extensibility.",
+    name: "Implementation & Integration",
+    Icon: FileCode,
+    description: "We scale the proof of concept into a production-ready solution, integrated directly into your existing systems and workflows. Built clean, tested thoroughly, and engineered to grow with you.",
   },
   {
     step: "04",
-    name: "Advisory & Handover",
+    name: "Ongoing Advisory",
     Icon: Headphones,
-    description: "We conduct structured team walkthroughs and documentation handoffs, remaining engaged as trusted technical advisors.",
+    description: "We don't vanish at go-live. We stay at the table — helping your team understand what was built, why it works, and how to get more from it. Ongoing advisory means the engagement evolves as your business does.",
   },
 ];
 
@@ -34,12 +34,12 @@ export default function Process() {
     <section id="process" className="py-28 md:py-36 px-6 bg-white border-b border-slate-200/80">
       <div className="max-w-6xl mx-auto">
         <FadeUp className="mb-16 md:mb-20 max-w-2xl">
-          <SectionLabel>Engagement Model</SectionLabel>
+          <SectionLabel>How We Work</SectionLabel>
           <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-[#0f172a] leading-tight mb-4">
-            A structured framework from discovery to delivery
+            From first conversation to production — a process built around you
           </h2>
           <p className="text-slate-600 text-base md:text-lg leading-relaxed">
-            Our advisory engagements follow disciplined milestones to eliminate uncertainty and ensure software architecture serves measurable business value.
+            Every engagement starts with a conversation, not a contract. We map what you actually need, shape a plan around it, and then see it through — keeping the things we build working for you long after we&apos;re done.
           </p>
         </FadeUp>
 
@@ -50,9 +50,8 @@ export default function Process() {
                 <div>
                   <div className="flex items-center justify-between mb-8">
                     <span className="text-xs font-bold text-[#047857] tracking-wider flex items-center">
-                        <span className="phase-pulse-dot" />
-                        PHASE {p.step}
-                      </span>
+                      PHASE {p.step}
+                    </span>
                     <div className="h-10 w-10 rounded-2xl bg-white border border-slate-200 shadow-2xs flex items-center justify-center text-[#0f172a] transition-colors duration-200 group-hover:bg-emerald-50 group-hover:border-emerald-200/60">
                       <p.Icon size={18} />
                     </div>

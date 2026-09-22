@@ -20,9 +20,9 @@ export default function Footer() {
 
           <nav className="flex flex-wrap items-center gap-8 text-xs text-slate-400 font-medium">
             <a href="#services" className="hover:text-white transition-colors">Services</a>
-            <a href="#due-diligence" className="hover:text-white transition-colors">Due Diligence</a>
-            <a href="#founders" className="hover:text-white transition-colors">Leadership</a>
-            <a href="#process" className="hover:text-white transition-colors">Engagement</a>
+            <a href="#explore-with-us" className="hover:text-white transition-colors">Explore with us</a>
+            <a href="#about-us" className="hover:text-white transition-colors">About us</a>
+            <a href="#process" className="hover:text-white transition-colors">How we work</a>
             <a href="#contact" className="hover:text-white transition-colors">Inquiries</a>
           </nav>
 

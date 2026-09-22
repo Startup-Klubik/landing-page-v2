@@ -9,91 +9,36 @@ interface ServiceItem {
   num: string;
   title: string;
   description: string;
-  whenToEngage: string;
-  deliverables: string[];
-  technologies: string;
 }
 
 const services: ServiceItem[] = [
   {
     id: "01",
     num: "01",
-    title: "Software Systems Engineering",
+    title: "AI & Automation",
     description:
-      "Full-cycle development for core products, platforms, and mission-critical APIs. We design and build maintainable software with clean separation of concerns, robust type systems, and comprehensive automated test coverage.",
-    whenToEngage:
-      "Monolithic tech debt, unmaintainable microservice sprawl, slow release cycles, or platform re-architectures where downtime is not an option.",
-    deliverables: [
-      "Custom APIs & Distributed Backend Services",
-      "Legacy Codebase Modernization & Refactoring",
-      "Domain-Driven Data Architectures",
-      "Comprehensive Automated Test Suites & CI Contracts",
-    ],
-    technologies: "TypeScript, Go, PostgreSQL, gRPC, Distributed Architectures",
+      "We build production-ready AI and automated workflows directly into your products — not proof-of-concepts, but working systems that eliminate repetitive manual work and deliver measurable ROI. From intelligent document processing to LLM-powered features embedded in your core product, we focus on what's verifiably useful.",
   },
   {
     id: "02",
     num: "02",
-    title: "Workflow & Process Automation",
+    title: "Technical Due Diligence",
     description:
-      "Bespoke internal tooling and automated pipelines that replace operational friction with deterministic developer velocity. We eliminate repetitive manual steps across developer and operations workflows.",
-    whenToEngage:
-      "Engineering teams burdened by manual deployments, fragile sync scripts, data reconciliation delays, or operational toil that slows release momentum.",
-    deliverables: [
-      "Deterministic CI/CD & Deployment Automation",
-      "Custom Internal Admin & Operations Tooling",
-      "Bi-Directional Multi-System Data Synchronization",
-      "Audit Trails, Event Telemetry & Compliance Logging",
-    ],
-    technologies: "GitHub Actions, Docker, Kubernetes, Temporal, Webhooks, CLI Tooling",
+      "Independent codebase and architecture assessments for investors, acquirers, and companies evaluating strategic deals. We provide objective analysis of code quality, technical debt, security exposure, and scalability risk — delivered in a format that's actionable for both technical and non-technical stakeholders.",
   },
   {
     id: "03",
     num: "03",
-    title: "Architecture & Systems Scaling",
+    title: "Software Development",
     description:
-      "Independent architectural audits, data pipeline tuning, and performance engineering for high-concurrency systems facing throughput or stability bottlenecks.",
-    whenToEngage:
-      "Database connection saturation, unpredictable latency spikes at peak load, memory pressure, or distributed architectures facing concurrency limits.",
-    deliverables: [
-      "Targeted Concurrency & Bottleneck Audits",
-      "Database Query Optimization & Sharding Strategies",
-      "High-Throughput Caching Topologies & Event Streams",
-      "Capacity Modeling, Circuit Breakers & Fault Isolation",
-    ],
-    technologies: "PostgreSQL, Redis, Kafka, eBPF Profiling, OpenTelemetry",
+      "Custom applications, APIs, and integrations — engineered from scratch or extended into your existing tech stack. We work across the full development lifecycle: greenfield builds, legacy modernisation, platform migrations, and everything in between. Clean architecture and long-term maintainability are non-negotiable.",
   },
   {
     id: "04",
     num: "04",
-    title: "Technical Due Diligence",
+    title: "Software Architecture",
     description:
-      "Objective codebase audits, architecture risk evaluations, and team reviews for venture capital, private equity, and founding teams preparing for transactions.",
-    whenToEngage:
-      "Institutional funding rounds, M&A acquisitions, or board-level risk reviews where investors require unbiased verification of software assets and code health.",
-    deliverables: [
-      "Static Code Quality & Technical Debt Quantification",
-      "Security Vulnerability & Open-Source License Audits",
-      "Infrastructure Cost & Scalability Risk Analysis",
-      "Executive Investment Committee Diligence Briefs",
-    ],
-    technologies: "Static Analysis, License Compliance Scans, CVE Vulnerability Profiling",
-  },
-  {
-    id: "05",
-    num: "05",
-    title: "Applied AI Integration",
-    description:
-      "Pragmatic integration of large language models and machine learning into existing production workflows — focused strictly on verifiable ROI rather than experimental hype.",
-    whenToEngage:
-      "Organizations looking to embed generative AI or intelligent reasoning into enterprise workflows with deterministic accuracy, low latency, and cost controls.",
-    deliverables: [
-      "Deterministic Retrieval-Augmented Generation (RAG)",
-      "Domain-Specific Evaluation Harnesses & Guardrails",
-      "Structured Extraction & Automated Document Reasoning",
-      "Cost-Optimized Model Routing & Latency Tuning",
-    ],
-    technologies: "pgvector, Structured LLM APIs, Semantic Caching, Evaluation Frameworks",
+      "Scalable system design, infrastructure reviews, and modernisation roadmaps for systems that have outgrown their current setup. We assess what you have, identify where the structural risks are, and define a clear path forward — whether that's a phased refactor, a re-architecture, or targeted performance work.",
   },
 ];
 
@@ -110,10 +55,10 @@ export default function Services() {
         <FadeUp className="mb-16 md:mb-20">
           <SectionLabel>Services</SectionLabel>
           <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-[#0f172a] max-w-2xl leading-tight">
-            Engineering depth across the technical lifecycle
+            Engineering skill and business context — across the full technical lifecycle.
           </h2>
           <p className="mt-4 text-slate-600 max-w-2xl leading-relaxed text-base md:text-lg">
-            We partner with leadership and engineering teams to design resilient architectures, resolve structural tech debt, and execute complex technical initiatives across every stage of growth.
+            We build, improve, and scale the technology behind growing businesses. Whether you&apos;re integrating AI, evaluating a deal, or scaling a system that&apos;s hit its limits — we bring the engineering depth to get it right.
           </p>
         </FadeUp>
 
@@ -166,45 +111,11 @@ export default function Services() {
                       transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
                       className="overflow-hidden"
                     >
-                      <div className="pb-8 md:pb-12 pl-8 md:pl-14 pr-2">
-                        <div className="grid md:grid-cols-12 gap-8 md:gap-12 pt-2 border-t border-slate-100">
-                          {/* Left Column: Narrative & Context */}
-                          <div className="md:col-span-7 space-y-5">
-                            <p className="text-base md:text-[17px] text-slate-700 leading-relaxed">
-                              {item.description}
-                            </p>
-
-                            <div className="pt-2">
-                              <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 block mb-1.5">
-                                When to Engage
-                              </span>
-                              <p className="text-xs md:text-sm text-slate-600 leading-relaxed">
-                                {item.whenToEngage}
-                              </p>
-                            </div>
-                          </div>
-
-                          {/* Right Column: Key Deliverables & Technologies */}
-                          <div className="md:col-span-5 space-y-4">
-                            <div>
-                              <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 block mb-3">
-                                Key Deliverables
-                              </span>
-                              <ul className="space-y-2.5 text-xs md:text-sm text-slate-700">
-                                {item.deliverables.map((d) => (
-                                  <li key={d} className="flex items-start gap-3">
-                                    <span className="h-1.5 w-1.5 rounded-full bg-[#047857] mt-2 shrink-0" />
-                                    <span className="leading-snug">{d}</span>
-                                  </li>
-                                ))}
-                              </ul>
-                            </div>
-
-                            <div className="pt-3 border-t border-slate-100 text-xs text-slate-500">
-                              <span className="font-semibold text-slate-700">Core technologies:</span>{" "}
-                              {item.technologies}
-                            </div>
-                          </div>
+                      <div className="pb-8 md:pb-12 pl-8 md:pl-14 pr-8 md:pr-14">
+                        <div className="pt-2 border-t border-slate-100">
+                          <p className="text-base md:text-[17px] text-slate-700 leading-relaxed max-w-3xl">
+                            {item.description}
+                          </p>
                         </div>
                       </div>
                     </motion.div>

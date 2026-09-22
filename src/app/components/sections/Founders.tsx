@@ -5,41 +5,40 @@ import FadeUp from "../shared/FadeUp";
 const leaders = [
   {
     name: "Dan",
-    title: "Chief Executive Officer & Chief Technology Officer",
     focus: "Technical Advisory & Architecture",
     avatar: "./avatars/Dan.JPG",
-    bio: "Leads software architecture, codebase analysis, and systems engineering. Brings deep technical depth from DTU to advise on scalable, maintainable distributed systems.",
-    linkedin: "https://www.linkedin.com/company/cora-technologies",
+    bio: "Ex-Game developer, leading software architecture, codebase analysis, and systems engineering. Brings deep technical depth from DTU to advise on scalable, maintainable distributed systems.",
+    linkedin: "https://www.linkedin.com/in/dan-vyhlidal/",
+    isFounder: true,
   },
   {
     name: "Diana",
-    title: "Chief Product Officer & Co-founder",
     focus: "Product Strategy & Operations",
     avatar: "./avatars/Diana.png",
     bio: "Leads product strategy, client advisory, and stakeholder alignment. Bridges complex technical implementations with clear commercial outcomes and timeline discipline.",
-    linkedin: "https://www.linkedin.com/company/cora-technologies",
+    linkedin: "https://www.linkedin.com/in/dianastratan/",
+    isFounder: true,
   },
   {
     name: "Alexandra",
-    title: "Head of User Experience & Brand",
     focus: "Interface Design & Brand Systems",
     avatar: "./avatars/Alexandra.png",
-    bio: "Directs interface architecture, brand identity, and design systems. Ensures sophisticated engineering platforms deliver polished, accessible, and intuitive user experiences.",
-    linkedin: "https://www.linkedin.com/company/cora-technologies",
+    bio: "Directs user experience, brand identity, and visual design of systems. Ensures we deliver polished, accessible, and intuitive user experiences.",
+    linkedin: "https://www.linkedin.com/in/alexandra-sadv%C3%A1rov%C3%A1/",
   },
 ];
 
 export default function Founders() {
   return (
-    <section id="founders" className="py-28 md:py-36 px-6 bg-[#f8fafc] border-b border-slate-200/80">
+    <section id="about-us" className="py-28 md:py-36 px-6 bg-[#f8fafc] border-b border-slate-200/80">
       <div className="max-w-6xl mx-auto">
         <FadeUp className="mb-16 md:mb-20">
-          <SectionLabel>Leadership</SectionLabel>
+          <SectionLabel>About Us</SectionLabel>
           <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-[#0f172a] max-w-2xl leading-tight">
-            Founded by systems engineers and technical advisors
+            Founded by computer scientists with passion in system design
           </h2>
           <p className="mt-4 text-slate-600 max-w-xl leading-relaxed text-base md:text-lg">
-            We combine academic depth from DTU SkyLab with real-world engineering execution. Every engagement is directly led and architected by our founding partners.
+            We combine academic knowledge from DTU with real-world engineering execution. Every engagement is directly led and architected by our founders.
           </p>
         </FadeUp>
 
@@ -52,7 +51,7 @@ export default function Founders() {
                     <div className="w-22 h-22 rounded-2xl overflow-hidden border border-slate-200 bg-slate-50 shadow-2xs">
                       <img
                         src={leader.avatar}
-                        alt={`${leader.name} — ${leader.title}`}
+                        alt={`${leader.name}`}
                         className="w-full h-full object-cover"
                         loading="lazy"
                       />
@@ -77,9 +76,6 @@ export default function Founders() {
                     <h3 className="text-2xl font-bold text-[#0f172a] mt-1.5 mb-1">
                       {leader.name}
                     </h3>
-                    <p className="text-xs font-semibold text-slate-500 mb-5 leading-normal">
-                      {leader.title}
-                    </p>
                     <p className="text-sm text-slate-600 leading-relaxed font-normal">
                       {leader.bio}
                     </p>
@@ -88,7 +84,9 @@ export default function Founders() {
 
                 <div className="mt-10 pt-5 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
                   <span>DTU SkyLab</span>
-                  <span className="text-[#047857] font-medium">Founding Partner</span>
+                  {leader.isFounder && (
+                    <span className="text-[#047857] font-medium">Founding Partner</span>
+                  )}
                 </div>
               </div>
             </FadeUp>
